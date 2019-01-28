@@ -1,0 +1,39 @@
+Short Answer
+1. Coders use pseudocode to write algorithms and express them without using a specific language syntax.
+2. Nothing will really happen. 
+
+Programming assignment
+1. INPUT first number
+   INPUT second number
+   IF the first number is greater than the second number THEN
+	RETURN first number
+   ELSE
+	RETURN second number
+   END IF
+
+2. INIT number to 0
+   WHILE number is less than 101
+	ADD 1 to number
+	RETURN number
+   END WHILE
+
+3. INPUT address
+   INIT number equal to 0
+   WHILE number is less than length of address book
+	IF address equals contact
+ 		RETURN contact
+	ELSE
+		RETURN NULL
+	END IF
+   ADD 1 to number
+   END WHILE
+
+4. let search = function(address) {
+    let contactsLength = contacts.length;
+	for (let i = 0; i < contactsLength; i++) {
+	    if(contacts[i].address == address) {
+	        console.log(contacts[i]);
+	        break;
+	        }
+	    }
+}
