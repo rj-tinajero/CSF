@@ -1,0 +1,104 @@
+1. Clean code is code that is easily readable and makes sense. It is important because others need to be able to understand your code if you are working on a team.
+
+2. Another thing that is used by computers is heart rate monitors. If the code is not correct, it could lead to displaying the wrong information.
+
+3. No because this function is doing two things, converting to celsius and fahrenheit. And too many comments.
+
+
+FUNCTION fahrToCel(x, y)
+ IF y = "F" THEN               
+   SET z to (x−32) * (5/9)       
+   PRINT z 
+ ELSE
+   PRINT "Already Celsius"
+ END IF
+END FUNCTION
+
+FUNCTION fahrToCel(x, y)
+ IF y = "C" THEN               
+   SET z to x * 1.8000 + 32.00        
+   PRINT z 
+ ELSE
+   PRINT "Already Fahrenheit"
+ END IF
+END FUNCTION
+
+
+4. No, the percentage variable is being printed out of scope. 
+
+FUNCTION calcPercent(sum, total)
+ IF NOT(total = 0) THEN
+     SET percentage to sum / total * 100
+     PRINT percentage
+ ELSE
+   PRINT "Sorry, cannot divide by 0"
+ END IF
+
+ END FUNCTION
+
+5a.
+
+FUNCTION checkOutCustomer(subTotal, discountRate, paymentType)
+   INPUT totalDue = subTotal * discountRate + (subTotal * tax)
+   PRINT "Your total due is: " + totalDue
+   CALL getPayment RETURNING amount
+
+   IF paymentType = 'CASH' THEN
+       PRINT "Change due: " + amount - totalDue
+   ELSE IF paymentType = 'CREDIT CARD' THEN
+       PRINT "Your credit card has been charged: " + totalDue
+   END IF
+END FUNCTION
+
+
+5b.
+
+FUNCTION checkoutBook(book, guest)
+ IF guest.accountActive AND guest.hasOverdueBooks if false AND guest.outstandingFees = 0 THEN
+    APPEND book to guest.books
+    SET book.status to "Checked Out"
+    PRINT "Your books have been issued."
+ ELSE
+     PRINT "Unable to check out book."
+ END IF
+END FUNCTION
+
+5c. 
+
+CLASS AtmTransactions
+
+ FUNCTION deposit(amount)
+    SET balance to balance + amount
+ END FUNCTION
+
+ FUNCTION withdraw(amount)
+     IF balance > amount THEN
+       SET balance to balance - amount
+     END
+ END FUNCTION
+
+END CLASS
+
+CLASS Account
+
+ FUNCTION displayBalance
+    PRINT balance
+ END FUNCTION
+
+ FUNCTION creditCardOffer
+     IF NOT(customer.hasCreditCard) THEN
+         CALL offerCreditCard
+     END
+ END FUNCTION
+
+ FUNCTION checkStatus
+     IF NOT(customer.hasCheckingAccount) THEN
+         CALL offerCheckingAccount
+     END
+ END FUNCTION
+
+END CLASS
+
+
+
+
