@@ -1,0 +1,26 @@
+1. A function that reports the time it take for a program to run. This is helpful to see how efficient an algorithm is. 
+
+2. Runtime is the physical time length of a program.
+
+3. To find the runtime of a program, you need to add up the number of instructions the program 
+will execute as a function of the size of the input and then simplify the expression to the largest 
+term and drop any constants.
+
+4. 
+Constant GR
+Logarithmic GR
+Linear GR
+Log-Linear GR
+Quadratic GR
+Cubic GR
+Exponential GR
+
+5. For linear GR, for email inboxes, you need to open every unread email in order for the count to reach zero.
+
+6. time complexcity is O(n) 
+
+7. time complexcity is O(n^2)
+
+8. time complexcity is O(2^n) 
+
+9. problem 8 is most efficient, Exponential GR
