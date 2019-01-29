@@ -21,3 +21,6 @@ END FUNCTION
 1) Toyota's Lean Manufacturing. Their efficient culture allows them to make more cars in shorter time.
 2) Amazon's prime shipping: able to provide customers with their orders fast.
 3) Uber's ride sharing programing. Allows people to get a ride from drivers nearby.
+
+//number 3
+An efficient algorithm is one that is completed in a shorter time than another algorithm that does the same thing but at a slower pace. 
