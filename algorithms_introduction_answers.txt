@@ -1,0 +1,23 @@
+// number 1
+INPUT hot water
+INPUT coffee grinds
+INIT hot water plus coffee grinds
+RETURN coffee from mixture
+
+FUNCTION cleanDishes(dirtyDishes, water, soap)
+WHILE dirtyDishes exist
+  ADD water AND soap
+  DECREMENT dirtyDishes
+END WHILE
+END FUNCTION
+
+FUNCTION takePicture(camera, subject)
+  SET camera to ON
+  SET focus on subject
+  RETURN picture 
+END FUNCTION
+
+// number 2
+1) Toyota's Lean Manufacturing. Their efficient culture allows them to make more cars in shorter time.
+2) Amazon's prime shipping: able to provide customers with their orders fast.
+3) Uber's ride sharing programing. Allows people to get a ride from drivers nearby.
