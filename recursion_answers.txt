@@ -1,0 +1,37 @@
+1. Iteration is a concept of using a loop to repeat a process. 
+Recursion is where a function calls itself over and over agin until it equals one of its base cases.
+
+2. factorials, fibonacci, palinedromes, finding the maximum number in a collection,
+finding out if a person has contracted an infection.
+
+3. Recursive functions tend to run slow and arent recommended for large and complex cases. Recursive functios can be used for sorting and searching methods like binary search and merge sort.
+
+4. For the factorial function, both recursive and iterative versions fail at taking negative numbers. The iterative versions holds the calculations in a result variable which is initialized to 1 and iterates through the numbers from the given input down to 2. 
+The maximum function iterative form loops through all numbers and compares them to a currentMaximum which gets updated and returned. The recursive version doesnt use a for loop and just makes multiple collections of numbers until it finds the largest number.
+The fibonacci functions recursive form uses if statements. The main part of the program are the recursive cases which calls the fib function with two less than the current function and again with one less than the number. These are added together and the result is returned. 
+The iterative version uses a for loop that only iterates when the number is greater than or equal to 3. Inside the loop is a function that just add the last two numbers to get the next one. 
+
+5. 
+function countElements(array){
+  if(array.length){
+    return 1 + countElements(array.slice(1))
+  } else {
+    return 0;
+  }
+}
+
+6. 
+var isPalindrome = function(str) {
+    var strLen = str.length;
+    if (strLen === 0 || strLen === 1) {
+        return true;
+    }
+    
+    if (str[0] === str[strLen - 1]) {
+        return isPalindrome( str.slice(1, strLen - 1) );
+    }
+    
+    return false;
+};
+
+7. The google recursion thing is an example of how google takes an input that it suspects ought to be something else that the user intented to write and calls itself over and over again until it returns what it thinks the user meant to type. 
