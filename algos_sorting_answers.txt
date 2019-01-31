@@ -1,0 +1,34 @@
+1. Bubble sort
+FUNCTION bubbleSort(arr) 
+    REPEAT
+        SET swapped to false
+        FOR i = FIRST INDEX of arr to LAST INDEX of arr - 1
+            IF arr[i] > arr{i +1 } THEN
+                SET tmp to arr[i]
+                SET arr{i} to arr{i + 1}
+                SET arr{i + 1} to tmp 
+                SET swapped to true
+            END IF
+        END FOR
+    UNTIL swapped is false
+    RETURN arr 
+END FUNCTION
+
+2. Quick sort
+FUNCTION quickSort(double[] a)
+    IF a.length <= 1
+        RETURN //Dont need sorting
+    SET pivot to LAST INDEX
+    PARTITION a[] in 2 halves
+        left[]: elements <= pivot
+        right[]: elements > pivot
+    Sort left[]
+    Sort right[]
+    CONCATENATE: left[] pivot
+END FUNCTION
+
+3. Merge sort is logarithmic and quick (worst case) is quadratic. These are both faster than other options, especially merge sort which maintains a consistent speed on any size of data.
+
+4. Bucket sort is an algorithm that distributes the contents of an array into a number
+of "buckets" Each bucket is then sorted individually, either using another sorting FUNCTION
+or by calling the bucket sort recursively. The ideal input is a collection that is uniformally distributed.
