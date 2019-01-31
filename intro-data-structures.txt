@@ -1,0 +1,40 @@
+["Vivian", "Ava", "Josh", "Patrick", "Mike"]
+
+1.b
+function rideLine(arr, person) {
+    if(person) {
+        arr.push(person);
+        return arr;
+    }
+}
+rideLine(["Vivian", "Ava", "Josh", "Patrick", "Mike"], "Mary");
+
+1.c and d
+function rideLine(arr, person) {
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] === person) {
+            return indexOf(arr[i]);
+        } else{
+            return "Cannot find " + person;
+        }
+    };
+}
+
+1.e 
+function rideLine(arr, person) {
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] === "Ava") {
+            arr.splice(indexOf{arr[i]}, 0, person);
+        }
+    };
+}
+
+1.f 
+function rideLine(arr) {
+    arr.splice(-2, 1);
+    return arr;
+}
+
+2. Routers need a data structure to route data from one computer to another. 
+
+3. You could use a hash table for the router example. It can map keys to values and searching through can be done pretty fast. 
