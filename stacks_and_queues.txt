@@ -1,0 +1,48 @@
+1. Stacks use the Last in First Out arrangement for its data.
+Queues use the First In First Out arrangement for its data.
+
+2. They both prioritize data with respect to how it is arranged. They are both data structure methodologies. 
+
+3. For UNDO I would use the Stack(LIFO) data structure because whatever is just added would be the first to be removed.
+For the REDO, I would also use the Stack because the redo will just re add whatever was taken off to the end of the list.
+
+Programming questions
+1. 
+function reverseStr(str) {
+    let strArr = str.split('');
+    let rtsArr = [];
+    for(let i = 0; i < strArr.length; i++) {
+        let char = strArr.pop();
+        rts.push(char);
+    }
+    return rtsArr.join('');
+}
+
+2.
+let q = [1, 2, 3, 4, 5];
+let s = q.length;
+let num = 6;
+q.push(num);
+function stack(s, num) {
+    for(let i = 0; i < s; i++) {
+        q.push(q[0]);
+        q.shift();
+    }
+}
+
+3. 
+function Queue() {
+    this.data = ["eat", "sleep", "code"];
+}
+
+Queue.prototype.dequeue = function() {
+    this.data.shift();
+}
+Queue.prototype.enqueue = function(x) {
+    this.data.push(x);
+}
+
+const q = new Queue():
+q.enqueue("repeat");
+
+q.dequeue();
