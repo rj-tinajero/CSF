@@ -20,14 +20,9 @@ function reverseStr(str) {
 
 2.
 let q = [1, 2, 3, 4, 5];
-let s = q.length;
-let num = 6;
-q.push(num);
-function stack(s, num) {
-    for(let i = 0; i < s; i++) {
-        q.push(q[0]);
-        q.shift();
-    }
+function pop(q) {
+    return q.pop();
+    
 }
 
 3. 
