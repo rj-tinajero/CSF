@@ -15,19 +15,20 @@ FUNCTION bubbleSort(arr)
 END FUNCTION
 
 2. Quick sort
-FUNCTION quickSort(double[] a)
-    IF a.length <= 1
+FUNCTION quickSort(arr)
+    IF arr.length <= 1
         RETURN //Dont need sorting
     SET pivot to LAST INDEX
-    PARTITION a[] in 2 halves
-        left[]: elements <= pivot
-        right[]: elements > pivot
-    Sort left[]
-    Sort right[]
-    CONCATENATE: left[] pivot
+    PARTITION arr[] in 2 halves
+        arr1[]: elements <= pivot
+        arr2[]: elements > pivot
+    CALL quickSort() on arr1[]
+    CALL quickSort() on arr2[]
+    JOIN arr1[] pivot
 END FUNCTION
 
 3. Merge sort is logarithmic and quick (worst case) is quadratic. These are both faster than other options, especially merge sort which maintains a consistent speed on any size of data.
+Bubble and Insertion sort in the best case are just linear while selection sort in the best case would only be quadratic. 
 
 4. Bucket sort is an algorithm that distributes the contents of an array into a number
 of "buckets" Each bucket is then sorted individually, either using another sorting FUNCTION
