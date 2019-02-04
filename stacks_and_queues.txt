@@ -19,11 +19,13 @@ function reverseStr(str) {
 }
 
 2.
-let q = [1, 2, 3, 4, 5];
 function pop(q) {
-    return q.pop();
-    
+    return q.slice(-1)[0];
+    return q.splice(-1, 1);
 }
+pop([1, 2, 3, 4 ,5]);
+
+
 
 3. 
 function Queue() {
