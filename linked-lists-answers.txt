@@ -1,0 +1,81 @@
+1. Linked lists are good at doing insertions and deletions verses an array which requires more data to shift depending on how big the array is. A con is that elements in linked lists have to be accessed in order starting at the first node.
+2. In a music playlist, you have a series of songsthat you can add and remove. You can drop songs in to a playlist anywhere you want, higher up if you want to hear them first in a playlist. When they get inserted in, they get sandwiched between other songs. 
+
+Programming Questions
+1.
+FUNCTION push(element)
+CREATE node
+SET node.value TO element
+SET node.next TO null
+
+IF the head node does not exist
+ THEN SET head to node    
+ELSE                   //need a while statement to bring us to the end of the list. 
+ SET current to head 
+ SET current.next to node
+END IF
+END FUNCTION
+
+
+FUNCTION push(element)
+CREATE node
+SET node.value TO element
+SET node.next TO null
+
+IF the head node does not exist
+ THEN SET head to node
+ELSE
+ SET current to head
+ WHILE current.next exists //meaning, once current.next equals null, then we are at the end of the list and we can add our new node
+  SET current to current.next
+ END WHILE
+ SET current.next to node
+END IF
+END FUNCTION
+
+2.
+
+function List() {
+    this.head = null;
+}
+
+List.prototype.removeRepeats = function() {
+    if(!this.head || this.head.next) {
+        console.log("No repeats here!");
+        return;
+    }
+
+    let p1;
+    let p2;
+    let p3;
+    let value;
+    p2 = this.head;
+
+    while(p2) {
+        value = p2.data;
+        p1 = p2;
+        p3 = p1.next;
+        while (p3) {
+            if(p3.data == value) {
+                p1.next = p3.next;
+            } else {
+                p1 = p3;
+            }
+            p3 = p3.next;
+        }
+        p2 = p2.next;
+    }
+};
+
+Values passed in will filter through
+
+3. 
+function reverse(head) {
+    if (!head || !head.next) {
+        retrun head;
+    }
+    let tmp = reverse(head.next);
+    head.next.next = head;
+    head.next = undefined; 
+    retrun tmp;
+}
