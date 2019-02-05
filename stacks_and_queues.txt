@@ -20,8 +20,8 @@ function reverseStr(str) {
 
 2.
 function pop(q) {
-    return q.slice(-1)[0];
-    return q.splice(-1, 1);
+    console.log(q.splice(-1, 1));
+    return q;
 }
 pop([1, 2, 3, 4 ,5]);
 
