@@ -35,11 +35,18 @@ END FUNCTION
 
 2.
 
-function List() {
-    this.head = null;
+function Node(value) {
+    this.value = value;
+    this.next = null;
 }
 
-List.prototype.removeRepeats = function() {
+function LinkedList() {
+    this.head = null;
+    this.value = null;
+    this.length = 0;
+}
+
+LinkedList.prototype.removeRepeats = function() {
     if(!this.head || this.head.next) {
         console.log("No repeats here!");
         return;
@@ -65,9 +72,29 @@ List.prototype.removeRepeats = function() {
         }
         p2 = p2.next;
     }
+
 };
 
-Values passed in will filter through
+LinkedList.prototype.find(item) {
+    let currNode = this.head;
+    while (currNode.value != item) {
+        currNode = currNode.next;
+    }
+    return currNode;
+}
+
+LinkedList.prototype.add = function(newValue, item) {
+    let newNode = new Node(newValue);
+    let current = this.find(item);
+    newNode.next = current.next;
+    current.next = newNode;
+}
+
+
+
+let ll = LinkedList();
+ll.add(values);
+ll.removeRepeats();
 
 3. 
 function reverse(head) {
