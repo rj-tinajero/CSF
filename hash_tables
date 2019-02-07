@@ -1,0 +1,10 @@
+1.  A data structure that stores each value by linking it to a key and forming a key-value pair. 
+2. Hashing is the conversion of dsata into a fixed-length hash code using a hashing function.
+3. Data is stored by assigning a hash code to a key that can be placed into an internal array. 
+4. Objects are for data that is a static number of distinct values of different types. Hash tables are for when the data contains a variable number of consistently formatted values, each with an identifier. 
+
+5a A list of pets and their unique names. - Object
+5b The name, age, and the birthday of your best friend. - Object
+5c The name and location of every company in a given city. - Hash Table
+5d All of the books checked out from a library by a particular individual. - Hash Table
+5e The primary and secondary phone numbers for a contact. - Object 
