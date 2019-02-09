@@ -1,0 +1,7 @@
+1. Binary trees are trees where each node may point to a left child and a right child.
+2. Heuristics are guesses that an algorithm makess to solve problems sooner by sacrificing accuracy. 
+3. One problem can be speech recognition. The software can execute based on guesses of what the audio most sounds like. 
+4. DFS searches start at the root node and move down along each branch and then backtracking up before checking the next branch.
+ BFS traverses a tree or graph at the neighbor nodes first and then moves tot he next level and so on. 
+5. A graph that permitts travel in either direction. The graph would also be a linked list or a tree because it doesnt loop. It also would not assign cost to travel between nodes.
+6. A Binary search tree is undirected, a-cyclic, unweighted graph 
