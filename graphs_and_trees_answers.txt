@@ -1,3 +1,5 @@
+HERE I AM !!!!!
+
 1. Binary trees are trees where each node may point to a left child and a right child.
 2. Heuristics are guesses that an algorithm makess to solve problems sooner by sacrificing accuracy. 
 3. One problem can be speech recognition. The software can execute based on guesses of what the audio most sounds like. 

@@ -1,5 +1,5 @@
 // 1 searching
-// WOuld create the tree by inserting in the values. Then would make a find function to go down the tree using if statements.
+// Would create the tree by inserting in the values. Then would make a find function to go down the tree using if statements.
 class Node {
     constructor(value) {
         this.value = value;
@@ -50,8 +50,8 @@ class BST {
                 found = true;
             }
         }
-        if(!found) return undefined;
-        return current; 
+        if(!found) return false;
+        return true; 
     }
 
 }
@@ -119,7 +119,7 @@ class BST {
         while(current && !found) {
             if(value < current.value) {
                 current = current.left;
-                count++; 
+                count++;
             } else if(value > current.value) {
                 current = current.right;
                 count++;
@@ -132,7 +132,13 @@ class BST {
         return current; 
     }
 
+    dist(n1, n2) {
+        return this.find(n1) + this.find(n2);
+    }
+    
+
 }
+
 
 let tree = new BST();
 tree.insert(8);
