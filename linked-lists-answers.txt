@@ -33,7 +33,7 @@ ELSE
 END IF
 END FUNCTION
 
-2.
+//2.
 
 function Node(value) {
     this.value = value;
@@ -75,7 +75,7 @@ LinkedList.prototype.removeRepeats = function() {
 
 };
 
-LinkedList.prototype.find(item) {
+LinkedList.prototype.find = function(item) {
     let currNode = this.head;
     while (currNode.value != item) {
         currNode = currNode.next;
@@ -92,17 +92,17 @@ LinkedList.prototype.add = function(newValue, item) {
 
 
 
-let ll = LinkedList();
+let ll = new LinkedList();
 ll.add(values);
 ll.removeRepeats();
 
-3. 
+//3. 
 function reverse(head) {
     if (!head || !head.next) {
-        retrun head;
+        return head;
     }
     let tmp = reverse(head.next);
     head.next.next = head;
     head.next = undefined; 
-    retrun tmp;
+    return tmp;
 }
