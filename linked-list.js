@@ -15,21 +15,34 @@ class LinkedList {
     }
 }
 
+LinkedList.prototype.print = function() {
+    let curr = this.head;
+    let res = "";
+    while (curr) {
+      res += curr.value + "-> ";
+      curr = curr.next;
+    }
+    console.log(res);
+  }
+
 LinkedList.prototype.deleteDubs = function() {
 	let current = this.head;
 	while(current) {
-		let runner = current;
-		while(runner.next) {
-			if(runner.next.value === current.value) {
-				runner.next = runner.next.value;
+		let runner = current.next;
+        let previous = current;
+		while(runner) {
+			if(runner.value === current.value) {
+                previous.next = runner.next; 
             } else {
-				runner = runner.next;
+                previous = previous.next;
             }
+            runner = runner.next;
         }
 		current = current.next;
     }
-	
+
 }
+
 
 
 
@@ -65,17 +78,30 @@ ll.add("d");
 ll.add("d");
 ll.add("a");
 
+ll.print();
+
 ll.deleteDubs();
 
-console.log(ll);
 
 //3. 
-function reverse(head) {
-    if (!head || !head.next) {
-        return head;
+LinkedList.prototype.reverse = function() {
+    function rev(curr, prev) {    
+      if (curr === null)
+        return prev;
+      
+      let temp = curr.next;
+      curr.next = prev;
+      return rev(temp, curr);
     }
-    let tmp = reverse(head.next);
-    head.next.next = head;
-    head.next = undefined; 
-    return tmp;
-}
+    
+    this.head = rev(this.head, null);
+  }
+  
+ll.add("a");
+ll.add("c");
+ll.add("d");
+ll.add("d");
+ll.add("a");
+
+ll.reverse();
+ll;
