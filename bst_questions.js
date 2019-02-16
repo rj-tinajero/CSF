@@ -111,16 +111,16 @@ class BST {
         }
     }
 
-    find(value) {
+    find(n1, n2) {
         if(this.root === null) return false;
-        let current = this.root;
+        let current = this.lca(n1, n2);
         let found = false;
         let count = 0;
         while(current && !found) {
-            if(value < current.value) {
+            if(n1 < current.value) {
                 current = current.left;
                 count++;
-            } else if(value > current.value) {
+            } else if(n1 > current.value) {
                 current = current.right;
                 count++;
             } else {
@@ -132,8 +132,51 @@ class BST {
         return current; 
     }
 
+    find2(n1, n2) {
+        if(this.root === null) return false;
+        let current = this.lca(n1, n2);
+        let found = false;
+        let count = 0;
+        while(current && !found) {
+            if(n2 < current.value) {
+                current = current.left;
+                count++;
+            } else if(n2 > current.value) {
+                current = current.right;
+                count++;
+            } else {
+                found = true;
+                return count;
+            }
+        }
+        if(!found) return undefined;
+        return current; 
+    }
+
+    lca(n1, n2) {
+        let current = this.root;
+        if(current != null) {
+            let found = 0;
+            while(current != null) {
+                if(current.value > n1 && current.value > n2) {
+                    current = current.left;
+                } else if (current.value < n1 && current.value < n2) {
+                    current = current.right
+                } else {
+                    found = 1;
+                    break;
+                }
+            }
+            if(found && current) {
+                return current;
+            }
+        }
+        
+    }
+
+
     dist(n1, n2) {
-        return this.find(n1) + this.find(n2);
+        return this.find(n1, n2) + this.find2(n1, n2);
     }
     
 
@@ -151,6 +194,6 @@ tree.insert(4);
 tree.insert(7);
 tree.insert(13);
 
-tree.dist(1, 14);
-tree.dist(8, 10);
-tree.dist(4, 10);
+tree.dist(10, 14);
+tree.dist(4, 7);
+
